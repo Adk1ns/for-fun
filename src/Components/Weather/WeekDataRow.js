@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import calcWindDirection from '../Utility/calcWindDirection'
-import calcMoonPhase from '../Utility/calcMoonPhase'
+import calcWindDirection from './helpers/calcWindDirection'
+import calcMoonPhase from './helpers/calcMoonPhase'
 
 const WeekDataRow = ({ data }) => {
 	const [dropdown, setDropdown] = useState(false)
@@ -14,7 +14,7 @@ const WeekDataRow = ({ data }) => {
 	useEffect(() => {
 		setMoonName(calcMoonPhase(data.moon_phase))
 		setWindDirection(calcWindDirection(data.wind_deg))
-	}, [])
+	}, [data.moon_phase, data.wind_deg])
 
 	return (
 		<div className='border-bottom py-1'>
@@ -22,6 +22,7 @@ const WeekDataRow = ({ data }) => {
 				<div>
 					<img
 						src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
+						alt='weather icon'
 					/>
 					{new Date(data.sunrise * 1000).toString().slice(0, 10)}
 				</div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import WeekForecast from './WeekForecast'
-import calcWindDirection from '../Utility/calcWindDirection'
+import calcWindDirection from './helpers/calcWindDirection'
 
 const Weather = () => {
 	const [weather, setWeather] = useState()
@@ -12,7 +12,7 @@ const Weather = () => {
 	useEffect(() => {
 		const fetchWeather = async () => {
 			const response = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=1dba6005931e5c0fd1c8d037a3266b47`
+				`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${process.env.REACT_APP_WEATHER_KEY}`
 			)
 			if (!response.ok) {
 				throw new Error('Something went wrong!')
@@ -26,7 +26,7 @@ const Weather = () => {
 		fetchWeather().catch((error) => {
 			console.log('Oops, there was an error', error)
 		})
-	}, [latitude])
+	}, [latitude, longitude])
 
 	//Find geo location,
 	if ('geolocation' in navigator) {
@@ -50,6 +50,7 @@ const Weather = () => {
 						<img
 							src={`http://openweathermap.org/img/wn/${icon}.png`}
 							className='my-2'
+							alt='weather icon'
 						/>
 						<h5>{Math.floor(weather.main.temp)} °F</h5>
 
