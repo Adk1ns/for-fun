@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import guid from '../Utility/guid'
+import { motion, AnimatePresence } from 'framer-motion'
+import DictionaryStyles from './DictionaryStyles'
 
 const Dictionary = () => {
 	const [searchWord, setSearchWord] = useState()
@@ -38,19 +40,25 @@ const Dictionary = () => {
 	}
 
 	return (
-		<div className='d-flex justify-content-between'>
-			<div className='col-3'>
-				Dictionary
-				<form onSubmit={searchHandler}>
-					<input type='text' placeholder='search' onChange={setTypedWord} />
+		<DictionaryStyles className='d-flex justify-content-between'>
+			<div className='col-3 text-center mt-4'>
+				<h5>Dictionary</h5>
+				<form onSubmit={searchHandler} className='my-3'>
+					<input
+						type='text'
+						placeholder='search'
+						onChange={setTypedWord}
+						className='search-input'
+					/>
 				</form>
 				{wordData && (
-					<p>
+					<h6>
 						{' '}
 						{searchWord} {wordData[0].phonetic}{' '}
-					</p>
+					</h6>
 				)}
 			</div>
+
 			<div className='col-9'>
 				{wordNotFound && <p>Could not find search word.</p>}
 				{wordData && (
@@ -58,7 +66,8 @@ const Dictionary = () => {
 						{wordData[0].meanings.map((meaning, index) => (
 							<div key={guid()}>
 								<p>
-									{index + 1} .) {meaning.partOfSpeech}{' '}
+									{index + 1} .){' '}
+									<em className='mr-2'>{meaning.partOfSpeech}</em>{' '}
 									{meaning.definitions[0].definition}
 								</p>
 							</div>
@@ -66,7 +75,7 @@ const Dictionary = () => {
 					</div>
 				)}
 			</div>
-		</div>
+		</DictionaryStyles>
 	)
 }
 

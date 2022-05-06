@@ -1,27 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavStyle from './NavStyle'
 
 const Nav = () => {
 	return (
-		<div>
+		<NavStyle>
 			<nav className='p-3 d-flex justify-content-between border-bottom'>
-				<h1>EXP</h1>
+				<h1 className='mx-4 nav-header'>ADK1NS</h1>
 				<div className='pt-4'>
-					<Link to='/' className='p-2'>
-						Home
+					<Link to='/' className='p-2 link-nav'>
+						About
 					</Link>
-					<Link to='/Blog' className='p-2'>
-						Blog
+					<Link to='/Resources' className='p-2 link-nav'>
+						Resources
 					</Link>
-					<Link to='/Colors' className='p-2'>
+					<Link to='/ColorTools' className='p-2 link-nav'>
 						Color Tools
 					</Link>
-					<Link to='/Docs' className='p-2'>
-						Docs
+					<Link to='/Login' className='p-2 link-nav'>
+						Log In
 					</Link>
 				</div>
 			</nav>
-		</div>
+		</NavStyle>
 	)
 }
 

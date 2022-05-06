@@ -41,7 +41,7 @@ const Weather = () => {
 	return (
 		<div className='row'>
 			{weather && (
-				<div className='col-3 today-details'>
+				<div className='col-3 today-details mt-4'>
 					<header className='text-center border-bottom'>
 						<h4>Today's Weather</h4>
 						<h4>{weather.name}</h4>
@@ -77,7 +77,7 @@ const Weather = () => {
 				</div>
 			)}
 
-			<div className='col-6'>
+			<div className='col-9'>
 				<WeekForecast latitude={latitude} longitude={longitude} />
 			</div>
 		</div>
