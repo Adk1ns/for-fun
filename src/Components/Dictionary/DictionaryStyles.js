@@ -7,6 +7,7 @@ const DictionaryStyles = styled.div`
 		border-right: none;
 		width: 12rem;
 		outline: none;
+		background: none;
 	}
 `
 

@@ -5,7 +5,7 @@ const TransparentBTN = styled.div`
 	padding-left: 1rem;
 	padding-right: 1rem;
 	${'' /* font-weight: bold; */}
-	border: 1px solid lightgray;
+	border: 2px solid #c5c3c6;
 	cursor: pointer;
 `
 

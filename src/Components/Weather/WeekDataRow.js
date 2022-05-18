@@ -20,7 +20,7 @@ const WeekDataRow = ({ data }) => {
 	}, [data.moon_phase, data.wind_deg])
 
 	return (
-		<div className='border-bottom py-1'>
+		<div className='py-1'>
 			<div className='d-flex justify-content-between align-items-center'>
 				<div>
 					<img
@@ -78,6 +78,7 @@ const WeekDataRow = ({ data }) => {
 					</motion.div>
 				)}
 			</AnimatePresence>
+			<div className='gray-line mx-auto' />
 		</div>
 	)
 }

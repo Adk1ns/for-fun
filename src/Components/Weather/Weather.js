@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import WeekForecast from './WeekForecast'
 import calcWindDirection from './helpers/calcWindDirection'
+import { TransparentBTN } from '../UI/Buttons'
 
-const Weather = () => {
+const Weather = ({ viewState, setViewState }) => {
 	const [weather, setWeather] = useState()
 	const [icon, setIcon] = useState('01d')
 	const [latitude, setLatitude] = useState('45.2023')
@@ -38,14 +39,19 @@ const Weather = () => {
 		console.log('No Geo Data Available, please allow location request.')
 	}
 
+	const backClickHandler = () => {
+		setViewState('intro')
+	}
+
 	return (
 		<div className='row'>
 			{weather && (
 				<div className='col-3 today-details mt-4'>
-					<header className='text-center border-bottom'>
+					<header className='text-center '>
 						<h4>Today's Weather</h4>
 						<h4>{weather.name}</h4>
 					</header>
+					<div className='gray-line mx-auto' />
 					<div className='text-center'>
 						<img
 							src={`http://openweathermap.org/img/wn/${icon}.png`}
@@ -80,6 +86,10 @@ const Weather = () => {
 			<div className='col-9'>
 				<WeekForecast latitude={latitude} longitude={longitude} />
 			</div>
+			<div className='gray-line mx-auto my-5' />
+			<TransparentBTN onClick={backClickHandler} className='mx-auto'>
+				Home
+			</TransparentBTN>
 		</div>
 	)
 }

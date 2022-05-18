@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
 const SideBarStyle = styled.div`
-	background-color: #dde5b6;
+	background-color: #c5c3c6;
 	margin-left: -1rem;
-	height: 100vh;
+	height: 100%;
+
+	.mini-projects {
+		padding: 1rem;
+	}
 
 	.profile-picture {
 		width: 7rem;
