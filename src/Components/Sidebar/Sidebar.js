@@ -27,9 +27,8 @@ const Sidebar = ({ viewState, setViewState }) => {
 			<div className='mt-3 text-navy'>
 				<h4>About</h4>
 				<p className='px-3 text-dark-gray'>
-					Web Engineer Lorem ipsum dolar blah durp dee doo habla dabla hole
-					cheetos good gravy super pineapple junk food for lettuce after pigs
-					and goats. Premium farts under a coconut while donuts.
+					A series of small projects just for fun created by Jered Adkins. I'd
+					like this to be a home page full of dev tools and other useful things.
 				</p>
 				<a
 					href='https://github.com/Adk1ns'

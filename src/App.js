@@ -6,6 +6,7 @@ import Nav from './Components/Header/Nav'
 import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
 import ColorTools from './Components/ColorTools/ColorTools'
+import Resources from './Pages/Resources'
 
 function App() {
 	return (
@@ -16,9 +17,9 @@ function App() {
 			<main>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='Resources' element={<p>Resources</p>} />
+					<Route path='Resources' element={<Resources />} />
 					<Route path='ColorTools' element={<ColorTools />} />
-					<Route path='Login' element={<p>Log the fuck in</p>} />
+					<Route path='Login' element={<p>Log the in</p>} />
 				</Routes>
 			</main>
 			<Footer />

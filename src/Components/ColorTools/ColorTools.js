@@ -5,7 +5,11 @@ const ColorTools = () => {
 	return (
 		<ColorToolsStyles>
 			<div>
-				<h1 className='text-center'>Color Tools Coming Soon</h1>
+				<h1 className='text-center my-5'>Color Tools Coming Soon</h1>
+				<p>
+					similar to what I am building:{' '}
+					<a href='https://coolors.co/palettes/trending'>coolers</a>
+				</p>
 			</div>
 		</ColorToolsStyles>
 	)
