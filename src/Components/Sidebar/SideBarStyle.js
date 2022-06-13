@@ -5,6 +5,12 @@ const SideBarStyle = styled.div`
 	margin-left: -1rem;
 	height: 100%;
 
+	.links {
+		color: black;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+
 	.mini-projects {
 		padding: 1rem;
 	}
@@ -13,6 +19,10 @@ const SideBarStyle = styled.div`
 		width: 7rem;
 		height: 7.5rem;
 		border-radius: 50%;
+	}
+
+	.sidebar-btn {
+		cursor: pointer;
 	}
 `
 export default SideBarStyle

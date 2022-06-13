@@ -9,6 +9,10 @@ const GlobalStyles = styled.div`
 		box-shadow: 3px 8px 20px lightgray;
 	}
 
+	.box-shadow-dark {
+		box-shadow: 3px 8px 20px darkgray;
+	}
+
 	.gray-line {
 		background-color: #c5c3c6;
 		height: 2px;

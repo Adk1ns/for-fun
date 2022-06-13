@@ -34,7 +34,7 @@ const Home = () => {
 									<img
 										src={mac}
 										alt='laptop picture'
-										className='img-home box-shadow'
+										className='img-home box-shadow-dark'
 									/>
 								</div>
 							</div>
@@ -44,7 +44,7 @@ const Home = () => {
 									<img
 										src={planning}
 										alt='laptop picture'
-										className='img-home box-shadow'
+										className='img-home box-shadow-dark'
 									/>
 								</div>
 								<div className='col-6 mt-5'>
