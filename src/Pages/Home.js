@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import Dictionary from '../Components/Dictionary/Dictionary'
+import About from '../Components/Home/About'
+import Contact from '../Components/Home/Contact'
+import Projects from '../Components/Home/Projects'
 import Sidebar from '../Components/Sidebar/Sidebar'
 import Weather from '../Components/Weather/Weather'
 import mac from '../Images/mac.jpg'
@@ -7,72 +10,66 @@ import planning from '../Images/planning.png'
 import HomeStyles from './HomeStyles'
 
 const Home = () => {
-	const [viewState, setViewState] = useState('intro')
+	const [viewState, setViewState] = useState('About')
+
+	function clickHandler(view) {
+		setViewState(view)
+	}
 
 	return (
 		<HomeStyles className='col'>
 			<div className='row'>
-				<div className='col-2'>
-					<Sidebar viewState={viewState} setViewState={setViewState} />
-				</div>
-				<div className='col-10 mt-3'>
-					{viewState === 'intro' && (
-						<div className='m-4 text-center'>
-							<div className='row pb-5'>
-								<div className='col-6 mt-5'>
-									<h2>Javascript Solutions</h2>
-									<p className='mt-5 text-gray'>
-										Hamburger pork loin ground round tenderloin chislic, strip
-										steak ribeye pork belly biltong tri-tip capicola. Swine
-										leberkas landjaeger, ham hock meatball tri-tip andouille
-										tenderloin doner. Tail kevin kielbasa pork, beef beef ribs
-										cupim ham pig tongue. Short ribs sausage porchetta pork
-										belly shankle turkey fatback.
-									</p>
-								</div>
-								<div className='col-6 d-flex justify-content-center'>
-									<img
-										src={mac}
-										alt='laptop picture'
-										className='img-home box-shadow-dark'
-									/>
+				<div className='col-12 mt-3'>
+					<div className='m-4 text-center'>
+						<div className='row pb-5'>
+							<div className='col-9 mt-5 text-left font-weight-bold'>
+								<h1>Professional web solutions done right.</h1>
+							</div>
+							<div className='col-3 d-flex justify-content-center'></div>
+						</div>
+
+						<div className='gray-line' />
+
+						<div className='row mt-5 pb-5'>
+							<div className='col-7 mt-2'>
+								<button
+									className='display-btn mx-4'
+									onClick={() => clickHandler('About')}>
+									About
+								</button>
+								<button
+									className='display-btn mx-4'
+									onClick={() => clickHandler('Projects')}>
+									Projects
+								</button>
+								<button
+									className='display-btn mx-4'
+									onClick={() => clickHandler('Adk1ns')}>
+									Adk1ns
+								</button>
+								<button
+									className='display-btn mx-4'
+									onClick={() => clickHandler('Contact')}>
+									Contact
+								</button>
+								<div className='p-4 mt-4'>
+									{viewState == 'About' && <About />}
+									{viewState == 'Projects' && <Projects />}
+									{viewState == 'Contact' && <Contact />}
 								</div>
 							</div>
-							<div className='gray-line' />
-							<div className='row mt-5 pb-5'>
-								<div className='col-6'>
-									<img
-										src={planning}
-										alt='laptop picture'
-										className='img-home box-shadow-dark'
-									/>
-								</div>
-								<div className='col-6 mt-5'>
-									<h2>Professionally Built Apps</h2>
-									<p className='mt-5 text-gray'>
-										Hire an engineer trained in the latest Javascript libraries,
-										frameworks, and web app technologies. With training in
-										React, Apollo/ GraphQL, Styled Components, Fire Base, and
-										more.
-									</p>
-								</div>
+							<div className='col-4 text-left'>
+								<h1>Dream</h1>
+								<h1>Plan</h1>
+								<h1>Create</h1>
 							</div>
-							<div className='gray-line' />
-							<p className='text-center mt-5'>
+						</div>
+
+						<div className='gray-line' />
+						{/* <h1 className='text-center mt-5'>
 								<em>Super Empowering Quote</em> - Mr. Dude
-							</p>
-						</div>
-					)}
-					{viewState === 'weather' && (
-						<div className='my-5'>
-							<Weather viewState={viewState} setViewState={setViewState} />
-						</div>
-					)}
-					{viewState === 'dictionary' && (
-						<div className='my-5'>
-							<Dictionary viewState={viewState} setViewState={setViewState} />
-						</div>
-					)}
+							</h1> */}
+					</div>
 				</div>
 			</div>
 		</HomeStyles>

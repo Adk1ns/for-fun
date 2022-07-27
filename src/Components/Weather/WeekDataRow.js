@@ -20,7 +20,7 @@ const WeekDataRow = ({ data }) => {
 	}, [data.moon_phase, data.wind_deg])
 
 	return (
-		<div className='py-1'>
+		<div className='py-1 '>
 			<div className='d-flex justify-content-between align-items-center'>
 				<div>
 					<img
@@ -48,7 +48,7 @@ const WeekDataRow = ({ data }) => {
 						animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
 						exit={{ opacity: 0, y: -25 }}>
 						<div>
-							<h5 className='mb-0 mt-2'>Sun</h5>
+							<h5 className='mb-0'>Sun</h5>
 							<p className='mb-0'>UV {data.uvi}</p>
 							<p className='mb-0'>
 								sunrise {new Date(data.sunrise * 1000).toString().slice(15, 21)}{' '}
@@ -58,7 +58,7 @@ const WeekDataRow = ({ data }) => {
 							</p>
 						</div>
 						<div>
-							<h5 className='mb-0 mt-2'>Moon</h5>
+							<h5 className='mb-0'>Moon</h5>
 							<p className='mb-0'>{moonName}</p>
 							<p className='mb-0'>
 								Moonrise{' '}
@@ -69,7 +69,7 @@ const WeekDataRow = ({ data }) => {
 							</p>
 						</div>
 						<div>
-							<h5 className='mb-0 mt-2'>Wind</h5>
+							<h5 className='mb-0'>Wind</h5>
 							<p className='mb-0'>{windDirection}</p>
 							<p>
 								{Math.floor(data.wind_speed)} - {Math.floor(data.wind_gust)} mph

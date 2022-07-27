@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
 const GlobalStyles = styled.div`
+	.headline-style {
+		color: white;
+		font-size: 10.5em;
+		text-decoration: underline;
+		text-decoration-color: black;
+		letter-spacing: -0.85rem;
+	}
 	.border-bottom {
 		border-bottom: 1px solid darkgray;
 	}
@@ -16,7 +23,7 @@ const GlobalStyles = styled.div`
 	.gray-line {
 		background-color: #c5c3c6;
 		height: 2px;
-		width: 95%;
+		width: 100%;
 	}
 
 	.text-gray {

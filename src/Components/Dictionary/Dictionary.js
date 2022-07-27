@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import DictionaryStyles from './DictionaryStyles'
 import { TransparentBTN } from '../UI/Buttons'
 
-const Dictionary = ({ viewState, setViewState }) => {
+const Dictionary = () => {
 	const [searchWord, setSearchWord] = useState()
 	const [queWord, setQueWord] = useState()
 	const [wordData, setWordData] = useState()
@@ -40,14 +40,14 @@ const Dictionary = ({ viewState, setViewState }) => {
 		setQueWord(e.target.value)
 	}
 
-	const backClickHandler = () => {
-		setViewState('intro')
-	}
+	// const backClickHandler = () => {
+	// 	setViewState('intro')
+	// }
 
 	return (
-		<DictionaryStyles className=''>
+		<DictionaryStyles className='p-3'>
 			<div className='row'>
-				<div className='col-3 text-center mt-4'>
+				<div className='col-4 text-center mt-4 pb-5'>
 					<h5>Dictionary</h5>
 					<form onSubmit={searchHandler} className='my-3'>
 						<input
@@ -58,14 +58,14 @@ const Dictionary = ({ viewState, setViewState }) => {
 						/>
 					</form>
 					{wordData && (
-						<h6>
+						<h6 className='counter-padding'>
 							{' '}
 							{searchWord} {wordData[0].phonetic}{' '}
 						</h6>
 					)}
 				</div>
 
-				<div className='col-9'>
+				<div className='col-8'>
 					{wordNotFound && <p>Could not find search word.</p>}
 					{wordData && (
 						<div>
@@ -82,12 +82,12 @@ const Dictionary = ({ viewState, setViewState }) => {
 					)}
 				</div>
 			</div>
-			<div className='gray-line mx-auto my-5' />
+			{/* <div className='gray-line mx-auto my-5' />
 			<div className='row'>
 				<TransparentBTN onClick={backClickHandler} className='mx-auto'>
 					Home
 				</TransparentBTN>
-			</div>
+			</div> */}
 		</DictionaryStyles>
 	)
 }

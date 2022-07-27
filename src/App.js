@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
 import ColorTools from './Components/ColorTools/ColorTools'
 import Resources from './Pages/Resources'
+import Samples from './Pages/Samples'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='Resources' element={<Resources />} />
+					<Route path='Samples' element={<Samples />} />
 					<Route path='ColorTools' element={<ColorTools />} />
 					<Route path='Login' element={<p>Log the in</p>} />
 				</Routes>

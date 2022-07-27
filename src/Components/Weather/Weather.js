@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import WeekForecast from './WeekForecast'
 import calcWindDirection from './helpers/calcWindDirection'
 import { TransparentBTN } from '../UI/Buttons'
+import WeatherStyle from './WeatherStyle'
 
-const Weather = ({ viewState, setViewState }) => {
+const Weather = () => {
 	const [weather, setWeather] = useState()
 	const [icon, setIcon] = useState('01d')
 	const [latitude, setLatitude] = useState('45.2023')
@@ -39,58 +40,59 @@ const Weather = ({ viewState, setViewState }) => {
 		console.log('No Geo Data Available, please allow location request.')
 	}
 
-	const backClickHandler = () => {
-		setViewState('intro')
-	}
-
 	return (
-		<div className='row'>
-			{weather && (
-				<div className='col-3 today-details mt-4'>
-					<header className='text-center '>
-						<h4>Today's Weather</h4>
-						<h4>{weather.name}</h4>
-					</header>
-					<div className='gray-line mx-auto' />
-					<div className='text-center'>
-						<img
-							src={`http://openweathermap.org/img/wn/${icon}.png`}
-							className='my-2'
-							alt='weather icon'
-						/>
-						<h5>{Math.floor(weather.main.temp)} °F</h5>
+		<WeatherStyle>
+			<div className='row'>
+				{weather && (
+					<div className='col-3 today-details mt-4 pr-0 mb-5'>
+						<header className='text-center mb-4'>
+							<h4>Today's Weather</h4>
+							<h4>{weather.name}</h4>
+						</header>
+						<div className='gray-line mx-auto' />
+						<div className='text-center mt-2'>
+							<img
+								src={`http://openweathermap.org/img/wn/${icon}.png`}
+								className='my-2'
+								alt='weather icon'
+							/>
+							<h5 className='mb-0'>{Math.floor(weather.main.temp)} °F</h5>
 
-						<p>
-							{weather.main.temp_min.toString().slice(0, 2)} -{' '}
-							{weather.main.temp_max.toString().slice(0, 2)} °F
-						</p>
-						<p>humidity: {weather.main.humidity}%</p>
-						<div>
 							<p>
-								Sunrise{' '}
-								{new Date(weather.sys.sunrise * 1000).toString().slice(16, 21)}
+								{Math.floor(weather.main.temp_min.toString())} -{' '}
+								{Math.floor(weather.main.temp_max.toString())} °F
 							</p>
+							<p className='mt-3'>humidity {weather.main.humidity}%</p>
+							<div className=''>
+								<p>
+									Sunrise{' '}
+									{new Date(weather.sys.sunrise * 1000)
+										.toString()
+										.slice(16, 21)}
+								</p>
+								<p>
+									Sunset{' '}
+									{new Date(weather.sys.sunset * 1000).toString().slice(16, 21)}
+								</p>
+							</div>
 							<p>
-								Sunset{' '}
-								{new Date(weather.sys.sunset * 1000).toString().slice(16, 21)}
+								Wind {Math.floor(weather.wind.speed)}/mph{' '}
+								{calcWindDirection(weather.wind.deg)}
 							</p>
 						</div>
-						<p>
-							Wind {Math.floor(weather.wind.speed)}/mph{' '}
-							{calcWindDirection(weather.wind.deg)}
-						</p>
+						<div className='gray-line mx-auto mb-5' />
 					</div>
-				</div>
-			)}
+				)}
 
-			<div className='col-9'>
-				<WeekForecast latitude={latitude} longitude={longitude} />
+				<div className='col-9 mt-2 pt-1'>
+					<WeekForecast latitude={latitude} longitude={longitude} />
+				</div>
+				{/* <div className='gray-line mx-auto my-5' />
+				<TransparentBTN onClick={backClickHandler} className='mx-auto'>
+					Home
+				</TransparentBTN> */}
 			</div>
-			<div className='gray-line mx-auto my-5' />
-			<TransparentBTN onClick={backClickHandler} className='mx-auto'>
-				Home
-			</TransparentBTN>
-		</div>
+		</WeatherStyle>
 	)
 }
 

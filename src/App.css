@@ -37,5 +37,17 @@
   }
 } */
 body {
-  background-color: #dcdcdd;
+  background-image: url('/home/j/Documents/code/Random Projects/for-fun/src/Images/colorBackground.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	left: 0;
+  z-index: 99;
 }
