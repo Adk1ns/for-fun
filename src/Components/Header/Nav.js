@@ -12,7 +12,7 @@ const Nav = () => {
 						Main
 					</Link>
 					<Link to='/Samples' className='p-2 link-nav'>
-						Samples
+						Projects
 					</Link>
 					{/* <Link to='/ColorTools' className='p-2 link-nav'>
 						Tools

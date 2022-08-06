@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 const NavStyle = styled.div`
 	background-color: black;
+	width: 100%;
+
 	${
 		'' /* position: -webkit-sticky;
 	position: sticky;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Dictionary from '../Components/Dictionary/Dictionary'
 import About from '../Components/Home/About'
+import Adk1ns from '../Components/Home/Adk1ns'
 import Contact from '../Components/Home/Contact'
 import Projects from '../Components/Home/Projects'
 import Sidebar from '../Components/Sidebar/Sidebar'
@@ -31,17 +32,17 @@ const Home = () => {
 						<div className='gray-line' />
 
 						<div className='row mt-5 pb-5'>
-							<div className='col-7 mt-2'>
+							<div className='col-7 mt-5'>
 								<button
 									className='display-btn mx-4'
 									onClick={() => clickHandler('About')}>
 									About
 								</button>
-								<button
+								{/* <button
 									className='display-btn mx-4'
 									onClick={() => clickHandler('Projects')}>
 									Projects
-								</button>
+								</button> */}
 								<button
 									className='display-btn mx-4'
 									onClick={() => clickHandler('Adk1ns')}>
@@ -56,6 +57,7 @@ const Home = () => {
 									{viewState == 'About' && <About />}
 									{viewState == 'Projects' && <Projects />}
 									{viewState == 'Contact' && <Contact />}
+									{viewState == 'Adk1ns' && <Adk1ns />}
 								</div>
 							</div>
 							<div className='col-4 text-left'>

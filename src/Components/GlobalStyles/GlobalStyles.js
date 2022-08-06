@@ -8,6 +8,14 @@ const GlobalStyles = styled.div`
 		text-decoration-color: black;
 		letter-spacing: -0.85rem;
 	}
+	.headline-style-sub {
+		color: white;
+		font-size: 5.5em;
+		text-decoration: underline;
+		text-decoration-color: black;
+		letter-spacing: -0.45rem;
+	}
+
 	.border-bottom {
 		border-bottom: 1px solid darkgray;
 	}
