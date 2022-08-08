@@ -45,6 +45,33 @@ const GlobalStyles = styled.div`
 	.text-navy {
 		color: #4c5c68;
 	}
+
+	@media screen and (max-width: 1246px) {
+		.headline-style {
+			font-size: 8.5em;
+			letter-spacing: -0.65rem;
+		}
+	}
+	@media screen and (max-width: 850px) {
+		.headline-style {
+			font-size: 9em;
+			letter-spacing: -0.65rem;
+		}
+	}
+	@media screen and (max-width: 750px) {
+		.headline-style {
+			font-size: 8em;
+			letter-spacing: -0.55rem;
+		}
+	}
+	@media screen and (max-width: 670px) {
+		.headline-style {
+			font-size: 4.5em;
+			letter-spacing: -0.4rem;
+		}
+	}
+	@media screen and (max-width: 574px) {
+	}
 `
 
 export default GlobalStyles

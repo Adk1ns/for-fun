@@ -3,11 +3,12 @@ import styled from 'styled-components'
 const HomeStyles = styled.div`
 	h1 {
 		color: white;
-		font-size: 10.5em;
+		font-size: 10.2em;
 		text-decoration: underline;
 		text-decoration-color: black;
 		letter-spacing: -0.85rem;
 	}
+
 	h4 {
 		letter-spacing: -0.07rem;
 	}
@@ -35,6 +36,9 @@ const HomeStyles = styled.div`
 		font-size: 1.35em;
 		letter-spacing: -0.05rem;
 		cursor: pointer;
+		&:hover {
+			color: #f77956;
+		}
 	}
 	.passport-pic {
 		border-radius: 100%;
@@ -48,7 +52,50 @@ const HomeStyles = styled.div`
 		width: 13rem;
 		position: absolute;
 		left: 2.6rem;
-		bottom: 7rem;
+		bottom: 6.5rem;
+	}
+
+	${'' /* changes on screen size ***************************************/}
+	@media screen and (max-width: 1244px) {
+	}
+	@media screen and (max-width: 1226px) {
+		h1 {
+			font-size: 8.5em;
+			letter-spacing: -0.65rem;
+		}
+
+		.trees {
+			bottom: 1.85rem;
+		}
+	}
+	@media screen and (max-width: 850px) {
+		h1 {
+			font-size: 9em;
+			letter-spacing: -0.65rem;
+		}
+		.trees {
+			bottom: 1.85rem;
+		}
+	}
+	@media screen and (max-width: 750px) {
+		h1 {
+			font-size: 8em;
+			letter-spacing: -0.55rem;
+		}
+		.trees {
+			bottom: 1.5rem;
+		}
+	}
+	@media screen and (max-width: 670px) {
+		h1 {
+			font-size: 4.5em;
+			letter-spacing: -0.4rem;
+		}
+	}
+	@media screen and (max-width: 574px) {
+		.trees {
+			display: none;
+		}
 	}
 `
 

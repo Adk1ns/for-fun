@@ -7,11 +7,11 @@ import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
 import ColorTools from './Components/ColorTools/ColorTools'
 import Resources from './Pages/Resources'
-import Samples from './Pages/Samples'
+import Projects from './Pages/Projects'
 
 function App() {
 	return (
-		<GlobalStyles>
+		<GlobalStyles className=''>
 			<header className=''>
 				<Nav />
 			</header>
@@ -19,7 +19,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='Resources' element={<Resources />} />
-					<Route path='Samples' element={<Samples />} />
+					<Route path='Samples' element={<Projects />} />
 					<Route path='ColorTools' element={<ColorTools />} />
 					<Route path='Login' element={<p>Log the in</p>} />
 				</Routes>
