@@ -7,8 +7,8 @@ import WeatherStyle from './WeatherStyle'
 const Weather = () => {
 	const [weather, setWeather] = useState()
 	const [icon, setIcon] = useState('01d')
-	const [latitude, setLatitude] = useState('45.2023')
-	const [longitude, setLongitude] = useState('-123.9629')
+	const [latitude, setLatitude] = useState('45.5152')
+	const [longitude, setLongitude] = useState('-122.6784')
 
 	//Get weather data
 	useEffect(() => {

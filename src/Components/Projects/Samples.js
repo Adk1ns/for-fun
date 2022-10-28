@@ -7,7 +7,7 @@ import ProProjects from './ProProjects'
 const Samples = () => {
 	return (
 		<div className='p-3 mb-5'>
-			<h1 className='mt-3 text-center headline-style-sub'>API Fun</h1>
+			{/* <h1 className='mt-3 text-center headline-style-sub'>API Fun</h1> */}
 			<div className='row mt-5'>
 				<div className='col-lg-6'>
 					<h1 className='headline-style'>Dictionary</h1>
