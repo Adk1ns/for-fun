@@ -20,7 +20,7 @@ const WeekForecast = ({ latitude, longitude }) => {
 		weekCast().catch((error) => {
 			console.log('Oops, there was an error', error)
 		})
-	}, [latitude])
+	}, [latitude, longitude])
 
 	return (
 		<div className='col'>

@@ -44,7 +44,7 @@ const Home = () => {
 									Contact
 								</button>
 								<div className='p-0 mt-4'>
-									{viewState == 'About' && (
+									{viewState === 'About' && (
 										<motion.div
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
@@ -52,7 +52,7 @@ const Home = () => {
 											<About />
 										</motion.div>
 									)}
-									{viewState == 'Contact' && (
+									{viewState === 'Contact' && (
 										<motion.div
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
@@ -60,7 +60,7 @@ const Home = () => {
 											<Contact />
 										</motion.div>
 									)}
-									{viewState == 'Adk1ns' && (
+									{viewState === 'Adk1ns' && (
 										<motion.div
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}

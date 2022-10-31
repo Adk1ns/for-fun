@@ -1,6 +1,6 @@
 import './App.css'
 // import 'bootswatch/dist/sandstone/bootstrap.min.css'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import GlobalStyles from './Components/GlobalStyles/GlobalStyles'
 import Nav from './Components/Header/Nav'
 import Home from './Pages/Home'

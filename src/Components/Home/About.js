@@ -6,7 +6,8 @@ const About = () => {
 	return (
 		<HomeStyles>
 			<div className='display-info px-4 pt-4 pb-4'>
-				<h4 className='mt-4 px-3 mb-5'>
+			<h2>About</h2>
+				<h4 className='mt-2 px-3 mb-5'>
 					High quality apps, web pages, games and digital experiences built with
 					the latest JavaScript technology and frameworks. Whether you building
 					your new dream or adding to an existing project, hire a top notch

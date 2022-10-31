@@ -28,8 +28,8 @@ const Adk1ns = () => {
 	return (
 		<HomeStyles>
 			<div className='display-info'>
-				<h3 className='mt-3'>About the Dev</h3>
-				<h3 className='my-3'>My name is Jered and I build web apps</h3>
+				<h2 className='mt-3'>The Dev</h2>
+				<h3 className='mb-3 mt-1'>My name is Jered and I build web apps</h3>
 				<h4 className='my-3'>When I am not at my desk...</h4>
 				<h5>You can usually find me at the beach</h5>
 				<h5>Making music in the garage</h5>
@@ -37,7 +37,7 @@ const Adk1ns = () => {
 					Or wresting this guy <span className='arrow'>&#8594;</span>
 				</h5>
 				<h5 className='d-block d-sm-none'>
-					Or wresting this guy <span className='arrow'>&#8595;</span>
+					Or wrestling this guy <span className='arrow'>&#8595;</span>
 				</h5>
 				<div className='d-flex justify-content-between mt-4'>
 				{jeredPicture === passport && (

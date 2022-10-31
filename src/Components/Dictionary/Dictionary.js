@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import guid from '../Utility/guid'
-import { motion, AnimatePresence } from 'framer-motion'
 import DictionaryStyles from './DictionaryStyles'
-import { TransparentBTN } from '../UI/Buttons'
 
 const Dictionary = () => {
 	const [searchWord, setSearchWord] = useState()

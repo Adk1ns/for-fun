@@ -2,7 +2,7 @@ import React from 'react'
 import Dictionary from '../../Components/Dictionary/Dictionary'
 import Inspiration from '../../Components/Inspiration/Inspiration'
 import Weather from '../../Components/Weather/Weather'
-import ProProjects from './ProProjects'
+// import ProProjects from './ProProjects'
 
 const Samples = () => {
 	return (

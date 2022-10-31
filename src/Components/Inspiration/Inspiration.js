@@ -20,9 +20,9 @@ const Inspiration = () => {
 		})
 	}, [])
 
-	const searchHandler = (e) => {
-		e.preventDefault()
-	}
+	// const searchHandler = (e) => {
+	// 	e.preventDefault()
+	// }
 
 	return (
 		<InspirationStyles>

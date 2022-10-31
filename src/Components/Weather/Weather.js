@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import WeekForecast from './WeekForecast'
 import calcWindDirection from './helpers/calcWindDirection'
-import { TransparentBTN } from '../UI/Buttons'
+// import { TransparentBTN } from '../UI/Buttons'
 import WeatherStyle from './WeatherStyle'
 
 const Weather = () => {
