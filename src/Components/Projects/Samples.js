@@ -30,21 +30,21 @@ const Samples = () => {
 
 			<div className='gray-line mt-5' />
 
-			<div className='row mt-2 pr-5'>
+			<div className='row mt-2 pr-lg-5'>
 				<div className='col-lg-6 text-right'>
 					<h1 className='headline-style'>Weather</h1>
 					<h1 className='headline-style'>Data</h1>
 					<h1 className='headline-style'>API</h1>
 				</div>
 
-				<div className='col-lg-6 mt-5 pl-4'>
+				<div className='col-lg-6 mt-5 pl-lg-4 p-0'>
 					<Weather />
 				</div>
 			</div>
 
-			<div className='gray-line mt-5' />
+			{/* <div className='gray-line mt-5' /> */}
 
-			<ProProjects />
+			{/* <ProProjects /> */}
 		</div>
 	)
 }

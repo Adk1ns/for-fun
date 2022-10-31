@@ -7,6 +7,11 @@ const TransparentBTN = styled.div`
 	${'' /* font-weight: bold; */}
 	border: 2px solid #c5c3c6;
 	cursor: pointer;
+
+	@media screen and (max-width: 446px) {
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+	}
 `
 
 export { TransparentBTN }

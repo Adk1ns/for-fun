@@ -25,6 +25,7 @@ const HomeStyles = styled.div`
 		border: solid black 0.5rem;
 		border-radius: 1rem;
 		min-height: 20rem;
+		position: relative;
 	}
 	.display-btn {
 		width: 6rem;
@@ -44,15 +45,36 @@ const HomeStyles = styled.div`
 		border-radius: 100%;
 		width: 6rem;
 		position: absolute;
-		left: 4rem;
-		bottom: 8.5rem;
+		left: 5%;
+		bottom: 10%;
+		cursor: pointer;
+		@media screen and (max-width: 1080px) and (min-width: 991px) {
+			width: 4rem;
+			bottom: 2%;
+		}
+	}
+	.forest-pic {
+		border-radius: 100%;
+		width: 6rem;
+		position: absolute;
+		right: 5%;
+		bottom: 10%;
+		cursor: pointer;
+		@media screen and (max-width: 1080px) and (min-width: 991px) {
+			width: 4rem;
+			bottom: 2%;
+		}
 	}
 
 	.trees {
 		width: 13rem;
 		position: absolute;
-		left: 2.6rem;
-		bottom: 6.5rem;
+		left: -0.05%;
+		bottom: -0.5%;
+	}
+
+	.arrow {
+		font-size: 1em;
 	}
 
 	${'' /* changes on screen size ***************************************/}
@@ -63,27 +85,17 @@ const HomeStyles = styled.div`
 			font-size: 8.5em;
 			letter-spacing: -0.65rem;
 		}
-
-		.trees {
-			bottom: 1.85rem;
-		}
 	}
 	@media screen and (max-width: 850px) {
 		h1 {
 			font-size: 9em;
 			letter-spacing: -0.65rem;
 		}
-		.trees {
-			bottom: 1.85rem;
-		}
 	}
 	@media screen and (max-width: 750px) {
 		h1 {
 			font-size: 8em;
 			letter-spacing: -0.55rem;
-		}
-		.trees {
-			bottom: 1.5rem;
 		}
 	}
 	@media screen and (max-width: 670px) {
@@ -92,6 +104,12 @@ const HomeStyles = styled.div`
 			letter-spacing: -0.4rem;
 		}
 	}
+	${'' /* @media screen and (min-width: 991px) and (max-width: 1100px) {
+		h1 {
+			font-size: 3em;
+			letter-spacing: -0.65rem;
+		}
+	} */}
 	@media screen and (max-width: 574px) {
 		.trees {
 			display: none;

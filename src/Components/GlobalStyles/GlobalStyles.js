@@ -45,10 +45,21 @@ const GlobalStyles = styled.div`
 	.text-navy {
 		color: #4c5c68;
 	}
-
+	@media screen and (max-width: 1400px) {
+		.headline-style {
+			font-size: 8.25em;
+			letter-spacing: -0.65rem;
+		}
+	}
 	@media screen and (max-width: 1246px) {
 		.headline-style {
-			font-size: 8.5em;
+			font-size: 8.25em;
+			letter-spacing: -0.65rem;
+		}
+	}
+	@media screen and (max-width: 1100px) {
+		.headline-style {
+			font-size: 7.25em;
 			letter-spacing: -0.65rem;
 		}
 	}
@@ -70,8 +81,12 @@ const GlobalStyles = styled.div`
 			letter-spacing: -0.4rem;
 		}
 	}
-	@media screen and (max-width: 574px) {
-	}
+	${'' /* @media screen and (min-width: 991px) and (max-width: 1100px) {
+		h1 {
+			font-size: 3em;
+			letter-spacing: -0.65rem;
+		}
+	} */}
 `
 
 export default GlobalStyles
