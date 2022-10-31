@@ -20,10 +20,13 @@ const Samples = () => {
 			<div className='gray-line mt-5' />
 
 			<div className='row mt-5'>
-				<div className='col-lg-6 mt-5'>
+			<div className='col-lg-6 d-block d-lg-none'>
+					<h1 className='headline-style'>Inspiration</h1>
+				</div>
+				<div className='col-lg-6 mt-xl-5'>
 					<Inspiration />
 				</div>
-				<div className='col-lg-6'>
+				<div className='col-lg-6 d-none d-lg-block'>
 					<h1 className='headline-style'>Inspiration</h1>
 				</div>
 			</div>
@@ -37,7 +40,7 @@ const Samples = () => {
 					<h1 className='headline-style'>API</h1>
 				</div>
 
-				<div className='col-lg-6 mt-5 pl-lg-4 p-0'>
+				<div className='col-lg-6 mt-5 pl-lg-4'>
 					<Weather />
 				</div>
 			</div>

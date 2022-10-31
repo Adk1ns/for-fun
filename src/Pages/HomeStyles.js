@@ -104,15 +104,17 @@ const HomeStyles = styled.div`
 			letter-spacing: -0.4rem;
 		}
 	}
-	${'' /* @media screen and (min-width: 991px) and (max-width: 1100px) {
-		h1 {
-			font-size: 3em;
-			letter-spacing: -0.65rem;
+	@media screen and (max-width: 590px) {
+		.passport-pic {
+			position: relative;
 		}
-	} */}
+		.forest-pic {
+			position: relative;
+		}
+	}
 	@media screen and (max-width: 574px) {
 		.trees {
-			display: none;
+			left: -.1%;
 		}
 	}
 `

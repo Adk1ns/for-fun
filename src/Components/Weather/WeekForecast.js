@@ -21,9 +21,6 @@ const WeekForecast = ({ latitude, longitude }) => {
 			console.log('Oops, there was an error', error)
 		})
 	}, [latitude])
-	// if (forecast) {
-	// 	console.log(forecast)
-	// }
 
 	return (
 		<div className='col'>

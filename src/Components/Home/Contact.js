@@ -5,7 +5,7 @@ import trees from '../../Images/trees.png'
 const Contact = () => {
 	return (
 		<HomeStyles>
-			<div className='display-info p-4 '>
+			<div className='display-info pt-4 '>
 				<h3 className='mb-3'>Contact info:</h3>{' '}
 				<h6 className='contact-info mb-3'>Jeredkins@gmail.com</h6>
 				<h6 className='mb-3'>

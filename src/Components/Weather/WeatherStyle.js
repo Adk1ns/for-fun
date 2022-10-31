@@ -9,7 +9,12 @@ const WeatherStyle = styled.div`
 		z-index: 1;
 	}
 
-	.dropdown-weather {
+	.weather-icon {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 575px) {
+		font-size: 1em;
 	}
 `
 

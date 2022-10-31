@@ -43,7 +43,7 @@ const Home = () => {
 									onClick={() => clickHandler('Contact')}>
 									Contact
 								</button>
-								<div className='p-4 mt-4'>
+								<div className='p-0 mt-4'>
 									{viewState == 'About' && (
 										<motion.div
 											initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const Home = () => {
 							<div className='col-4 text-left'>
 								<h1>Dream</h1>
 								<h1>Plan</h1>
-								<h1>Create</h1>
+								<h1>Create.</h1>
 							</div>
 						</div>
 

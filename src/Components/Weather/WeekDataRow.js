@@ -20,20 +20,22 @@ const WeekDataRow = ({ data }) => {
 	}, [data.moon_phase, data.wind_deg])
 
 	return (
-		<div className='py-1 '>
+		<div className='py-1'>
 			<div className='d-flex justify-content-between align-items-center'>
-				<div>
+				<div className='col-3 p-0 d-flex justify-content-center'>
+				{/* {new Date(data.sunrise * 1000).toString().slice(3, 10)} */}
 					<img
 						src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
 						alt='weather icon'
+						className='weather-icon'
 					/>
-					{new Date(data.sunrise * 1000).toString().slice(0, 10)}
+					{new Date(data.sunrise * 1000).toString().slice(3, 10)}
 				</div>
-				<div>{data.weather[0].description}</div>
-				<div>
+				<div className='col-2 p-0 d-none d-sm-block'>{data.weather[0].description}</div>
+				<div className='p-0'>
 					{Math.floor(data.temp.min)} - {Math.floor(data.temp.max)} °F
 				</div>
-				<div>
+				<div className='p-0'>
 					<TransparentBTN onClick={dropdownClickHandler}>
 						Details
 					</TransparentBTN>
@@ -42,11 +44,12 @@ const WeekDataRow = ({ data }) => {
 			<AnimatePresence>
 				{dropdown && (
 					<motion.div
-						className='d-flex justify-content-between text-center dropdown-weather'
+						className=' text-center dropdown-weather'
 						key={guid()}
 						initial={{ opacity: 0, y: -25 }}
 						animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
 						exit={{ opacity: 0, y: -25 }}>
+						<div className='d-flex justify-content-between mt-2'>
 						<div>
 							<h5 className='mb-0'>Sun</h5>
 							<p className='mb-0'>UV {data.uvi}</p>
@@ -74,6 +77,7 @@ const WeekDataRow = ({ data }) => {
 							<p>
 								{Math.floor(data.wind_speed)} - {Math.floor(data.wind_gust)} mph
 							</p>
+						</div>
 						</div>
 					</motion.div>
 				)}

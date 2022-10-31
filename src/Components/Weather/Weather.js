@@ -41,12 +41,12 @@ const Weather = () => {
 	}
 
 	return (
-		<WeatherStyle>
+		<WeatherStyle className='col'>
 			<div className='row'>
 				{weather && (
 					<div className='col-3 today-details mt-4 pr-0 mb-5'>
 						<header className='text-center mb-4'>
-							<h4>Today's Weather</h4>
+							<h5>Today's Weather</h5>
 							<h4>{weather.name}</h4>
 						</header>
 						<div className='gray-line mx-auto' />
@@ -84,7 +84,7 @@ const Weather = () => {
 					</div>
 				)}
 
-				<div className='col-9 mt-2 pt-1'>
+				<div className='col-9 mt-2 pt-1 px-0'>
 					<WeekForecast latitude={latitude} longitude={longitude} />
 				</div>
 				{/* <div className='gray-line mx-auto my-5' />

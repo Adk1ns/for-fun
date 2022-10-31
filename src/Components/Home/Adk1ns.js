@@ -33,9 +33,13 @@ const Adk1ns = () => {
 				<h4 className='my-3'>When I am not at my desk...</h4>
 				<h5>You can usually find me at the beach</h5>
 				<h5>Making music in the garage</h5>
-				<h5>
+				<h5 className='d-none d-sm-block'>
 					Or wresting this guy <span className='arrow'>&#8594;</span>
 				</h5>
+				<h5 className='d-block d-sm-none'>
+					Or wresting this guy <span className='arrow'>&#8595;</span>
+				</h5>
+				<div className='d-flex justify-content-between mt-4'>
 				{jeredPicture === passport && (
 					<motion.div
 						initial={{}}
@@ -64,12 +68,6 @@ const Adk1ns = () => {
 						/>
 					</motion.div>
 				)}
-				<img
-					src={forestPicture}
-					alt='Forest the dog'
-					className='forest-pic'
-					onClick={clickHandlerForest}
-				/>
 				{forestPicture === ForestPokemon && (
 					<motion.div
 						initial={{}}
@@ -98,6 +96,7 @@ const Adk1ns = () => {
 						/>
 					</motion.div>
 				)}
+				</div>
 			</div>
 		</HomeStyles>
 	)

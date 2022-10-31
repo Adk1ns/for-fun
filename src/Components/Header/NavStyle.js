@@ -21,11 +21,17 @@ const NavStyle = styled.div`
 			color: #f77956;
 			text-decoration: none;
 		}
+		@media screen and (max-width: 400px) {
+			font-size: 1.2em;
+		}
 	}
 
 	.nav-header {
 		color: white;
 		letter-spacing: -0.2rem;
+		@media screen and (max-width: 400px) {
+			font-size: 2.2em;
+		}
 	}
 `
 
