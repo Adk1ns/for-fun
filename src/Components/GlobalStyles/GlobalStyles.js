@@ -81,6 +81,12 @@ const GlobalStyles = styled.div`
 			letter-spacing: -0.4rem;
 		}
 	}
+	@media screen and (max-width: 305px) {
+		.headline-style {
+			font-size: 4em;
+			letter-spacing: -0.35rem;
+		}
+	}
 	${'' /* @media screen and (min-width: 991px) and (max-width: 1100px) {
 		h1 {
 			font-size: 3em;

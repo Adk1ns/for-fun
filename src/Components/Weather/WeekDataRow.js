@@ -22,23 +22,30 @@ const WeekDataRow = ({ data }) => {
 	return (
 		<div className='py-1'>
 			<div className='d-flex justify-content-between align-items-center'>
-				<div className='col-3 p-0 d-flex justify-content-center'>
+				<div className='col-2 p-0 d-flex justify-content-center'>
 				{/* {new Date(data.sunrise * 1000).toString().slice(3, 10)} */}
 					<img
 						src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
 						alt='weather icon'
 						className='weather-icon'
 					/>
-					{new Date(data.sunrise * 1000).toString().slice(3, 10)}
+					{/* <div className='mt-sm-4'>
+						{new Date(data.sunrise * 1000).toString().slice(0, 10)}
+					</div> */}
 				</div>
+				<div className='col-2 mt-sm-4 px-0 pb-3'>
+						{new Date(data.sunrise * 1000).toString().slice(0, 10)}
+					</div>
 				<div className='col-2 p-0 d-none d-sm-block'>{data.weather[0].description}</div>
-				<div className='p-0'>
-					{Math.floor(data.temp.min)} - {Math.floor(data.temp.max)} °F
-				</div>
-				<div className='p-0'>
-					<TransparentBTN onClick={dropdownClickHandler}>
-						Details
-					</TransparentBTN>
+				<div>
+					<div className='p-0 text-center'>
+						{Math.floor(data.temp.min)} - {Math.floor(data.temp.max)} °F
+					</div>
+					<div className='p-0'>
+						<TransparentBTN onClick={dropdownClickHandler}>
+							Details
+						</TransparentBTN>
+					</div>
 				</div>
 			</div>
 			<AnimatePresence>

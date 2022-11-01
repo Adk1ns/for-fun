@@ -33,6 +33,18 @@ const NavStyle = styled.div`
 			font-size: 2.2em;
 		}
 	}
+
+	@media screen and (max-width: 350px) {
+		.link-nav {
+			font-size: 1em;
+		}
+		.nav-header {
+			letter-spacing: -0.2rem;
+			@media screen and (max-width: 400px) {
+				font-size: 1.8em;
+			}
+		}
+	}
 `
 
 export default NavStyle

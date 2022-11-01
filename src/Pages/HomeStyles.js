@@ -67,7 +67,8 @@ const HomeStyles = styled.div`
 	}
 
 	.trees {
-		width: 13rem;
+		width: 50%;
+		max-width: 13rem;
 		position: absolute;
 		left: -0.05%;
 		bottom: -0.5%;
@@ -100,8 +101,20 @@ const HomeStyles = styled.div`
 	}
 	@media screen and (max-width: 670px) {
 		h1 {
-			font-size: 4.5em;
+			font-size: 4.35em;
 			letter-spacing: -0.4rem;
+		}
+		.contact-info {
+			font-size: 1.5em;
+		}
+	}
+	@media screen and (max-width: 360px) {
+		h1 {
+			font-size: 3.1em;
+			letter-spacing: -0.3rem;
+		}
+		.contact-info {
+			font-size: 1em;
 		}
 	}
 	@media screen and (max-width: 590px) {

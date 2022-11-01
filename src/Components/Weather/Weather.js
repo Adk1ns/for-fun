@@ -41,11 +41,11 @@ const Weather = () => {
 	}
 
 	return (
-		<WeatherStyle className='col'>
+		<WeatherStyle className='col-12'>
 			<div className='row'>
 				{weather && (
-					<div className='col-3 today-details mt-4 pr-0 mb-5'>
-						<header className='text-center mb-4'>
+					<div className='col-sm-12 col-md-3 today-details mt-4'>
+						<header className='text-center mb-md-4'>
 							<h5>Today's Weather</h5>
 							<h4>{weather.name}</h4>
 						</header>
@@ -80,11 +80,11 @@ const Weather = () => {
 								{calcWindDirection(weather.wind.deg)}
 							</p>
 						</div>
-						<div className='gray-line mx-auto mb-5' />
+						<div className='gray-line mx-auto mb-2' />
 					</div>
 				)}
 
-				<div className='col-9 mt-2 pt-1 px-0'>
+				<div className='col-sm-12 col-md-9 mt-md-2 pt-1 px-0'>
 					<WeekForecast latitude={latitude} longitude={longitude} />
 				</div>
 				{/* <div className='gray-line mx-auto my-5' />
